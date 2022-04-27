@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Beauty Apps</string>
+    <string name="btn_login">Sign In</string>
+    <string name="btn_register">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="Password">Password</string>
+    <string name="lupa_password">Lupa Password</string>
+</resources>
