@@ -68,9 +68,18 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <CheckBox
+            android:id="@+id/check_savepassword"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Password"
+            style="@style/text_light"/>
+
 <!--        Button -->
         <Button
             android:id="@+id/btn_login"
+            android:onClick="goHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn_login"
@@ -79,6 +88,7 @@
             android:background="@drawable/rounded_btn"/>
 
         <TextView
+            android:onClick="goForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

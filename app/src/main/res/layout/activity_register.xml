@@ -87,9 +87,18 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <CheckBox
+            android:id="@+id/check_agree"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saya menyetuji syarat &amp; ketentuan"
+            style="@style/text_light"/>
+
         <!--        Button -->
         <Button
             android:id="@+id/btn_login"
+            android:onClick="goLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn_register"
@@ -98,6 +107,7 @@
             android:background="@drawable/rounded_btn"/>
 
         <TextView
+            android:onClick="goLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
