@@ -5,20 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class Register : AppCompatActivity() {
+class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_welcome)
     }
 
-//Button
-    fun goLoginfromRegister(view: View?) {
-        val intent = Intent(this@Register, Login::class.java)
+    //    Button
+    fun goLogin(view: View?) {
+        val intent = Intent(this@WelcomeActivity, Login::class.java)
         startActivity(intent)
     }
 
-    fun goLogin(view: View?) {
-        val intent = Intent(this@Register, WelcomeActivity::class.java)
+    fun goRegister(view: View?) {
+        val intent = Intent(this@WelcomeActivity, Register::class.java)
         startActivity(intent)
     }
 }

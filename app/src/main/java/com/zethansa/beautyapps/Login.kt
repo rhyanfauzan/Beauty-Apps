@@ -22,4 +22,14 @@ class Login : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun goLoginfromRegister(view: View) {
+        val intent = Intent(this@Login, Register::class.java)
+        startActivity(intent)
+    }
+    fun goLogin(view: View) {
+        val intent = Intent(this@Login, WelcomeActivity::class.java)
+        startActivity(intent)
+    }
+
+
 }
