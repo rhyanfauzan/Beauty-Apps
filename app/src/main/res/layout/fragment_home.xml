@@ -97,6 +97,8 @@
                         android:textColor="#99FFFFFF" />
 
                     <ImageView
+                        android:id="@+id/goChat"
+                        android:onClick="goChatfromHome"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentRight="true"
