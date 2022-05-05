@@ -98,15 +98,13 @@
 
                     <ImageView
                         android:id="@+id/goChat"
-                        android:onClick="goChatfromHome"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
+                        android:onClick="goChatfromHome"
                         android:src="@drawable/ic_rightback" />
-
                 </RelativeLayout>
-
             </com.google.android.material.card.MaterialCardView>
 
             <!--        Produk -->

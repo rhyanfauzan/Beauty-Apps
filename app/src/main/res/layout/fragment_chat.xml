@@ -55,6 +55,8 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card1"
+                    android:onClick="goDetailDokter"
                     android:layout_marginVertical="10dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="20dp"
@@ -64,9 +66,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -118,9 +117,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -180,9 +176,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -234,9 +227,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -296,9 +286,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -350,9 +337,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -412,9 +396,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -466,9 +447,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -528,9 +506,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -582,9 +557,6 @@
                     app:contentPaddingRight="20dp"
                     app:contentPaddingTop="20dp"
                     app:contentPaddingBottom="20dp"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#B3CCCCCC"
-                    app:cardElevation="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 

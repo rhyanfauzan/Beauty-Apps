@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailDokterFragment">
+
+    <ImageView
+        android:id="@+id/ic_goback"
+        android:onClick="goBackButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/ic_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/title_page"
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ic_goback"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Detail Dokter" />
+
+    <ScrollView
+        android:layout_below="@id/title_page"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        col -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--            Baris -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/fotodokter1"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/drboy"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="#B3CCCCCC"/>
+
+                        <TextView
+                            android:id="@+id/namadokter1"
+                            style="@style/h1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fotodokter1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center"
+                            android:text="Dr. Boy William" />
+
+                        <TextView
+                            style="@style/h2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/namadokter1"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="Dermatologi"
+                            android:textColor="@color/grey" />
+
+                    </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/h2"
+                android:text="About"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_regular"
+                android:justificationMode="inter_word"
+                android:text="About Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/h2"
+                android:text="Working Time"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_regular"
+                android:text="Senin - Jumat (08:30 WIB - 20:00 WIB)"/>
+
+
+            <Button
+                android:id="@+id/btn_konsult"
+                android:onClick="goDetailChat"
+                style="@style/btn_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/rounded_btn"
+                android:text="Konsultasi sekarang" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+        </LinearLayout>
+        <!--        End Col -->
+
+    </ScrollView>
+
+</RelativeLayout>

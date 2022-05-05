@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -64,7 +63,7 @@ class HomeActivity : AppCompatActivity() {
 
     fun goChatfromHome(view: View) {
 
-        val text = "Move to chat"
+        val text = "Silahkan pilih Dokter !"
         val duration = Toast.LENGTH_SHORT
 
         val toast = Toast.makeText(applicationContext, text, duration)
@@ -76,6 +75,45 @@ class HomeActivity : AppCompatActivity() {
 
 //        move fragment
         val fragment = ChatFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
+    }
+
+    fun goBackButton(view: View) {
+
+        val text = "Kembali"
+        val duration = Toast.LENGTH_SHORT
+
+        val toast = Toast.makeText(applicationContext, text, duration)
+        toast.show()
+
+//        move back fragment
+        val fragment = ChatFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
+    }
+
+    fun goDetailDokter(view: View) {
+
+        val text = "Detail informasi Dokter"
+        val duration = Toast.LENGTH_SHORT
+
+        val toast = Toast.makeText(applicationContext, text, duration)
+        toast.show()
+
+//      move fragment to detail
+        val fragment = DetailDokterFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
+    }
+
+    fun goDetailChat(view: View) {
+
+        val text = "Chat Dokter"
+        val duration = Toast.LENGTH_SHORT
+
+        val toast = Toast.makeText(applicationContext, text, duration)
+        toast.show()
+
+//      move fragment to detail
+        val fragment = DetailChatFragment()
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
     }
 
