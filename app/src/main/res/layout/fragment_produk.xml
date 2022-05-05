@@ -4,24 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ChatFragment">
+    tools:context=".FavoriteFragment">
 
     <TextView
         android:id="@+id/title_page"
+        style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        style="@style/h2"
-        android:text="Chat Dokter"/>
+        android:text="Produk" />
 
-    <ImageView
-        android:layout_toRightOf="@id/title_page"
-        android:layout_marginTop="22dp"
-        android:layout_marginLeft="8dp"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/ic_headset"/>
+<!--    <ImageView-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginTop="22dp"-->
+<!--        android:layout_toRightOf="@id/title_page"-->
+<!--        android:src="@drawable/ic_headset" />-->
 
     <SearchView
         android:id="@+id/search_dokter"
@@ -33,7 +33,7 @@
         android:background="@drawable/rounded_search"
         android:queryBackground="@color/transparent"
         android:iconifiedByDefault="false"
-        android:queryHint="Cari dokter konsultasi" />
+        android:queryHint="Cari produk.." />
 
     <ScrollView
         android:layout_below="@id/search_dokter"
@@ -48,6 +48,14 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+<!--            Banner -->
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:src="@drawable/banner1"/>
 
 <!--            Baris -->
             <com.google.android.flexbox.FlexboxLayout
@@ -73,35 +81,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter1"
+                        <ImageView
+                            android:id="@+id/fotoproduk1"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/drboy"
-                            app:civ_border_width="0.5dp"
-                            app:civ_border_color="#B3CCCCCC"/>
+                            android:src="@drawable/p1" />
 
                         <TextView
-                            android:id="@+id/namadokter1"
+                            android:id="@+id/namaproduk1"
                             style="@style/title"
-                            android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter1"
+                            android:layout_below="@id/fotoproduk1"
                             android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Dr. Boy William" />
+                            android:text="Night Cream" />
 
                         <TextView
-                            style="@style/subtitle"
+                            style="@style/text_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter1"
+                            android:layout_below="@id/namaproduk1"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Dermatologi" />
+                            android:text="Rp. 99000" />
 
                     </RelativeLayout>
 
@@ -124,35 +129,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter2"
+                        <ImageView
+                            android:id="@+id/fotoproduk2"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/drgirl2"
-                            app:civ_border_width="0.5dp"
-                            app:civ_border_color="#B3CCCCCC"/>
+                            android:src="@drawable/p2" />
 
                         <TextView
-                            android:id="@+id/namadokter2"
+                            android:id="@+id/namaproduk2"
                             style="@style/title"
                             android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter2"
+                            android:layout_below="@id/fotoproduk2"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Dr. Girl Beatrix" />
+                            android:text="Facial Wash" />
 
                         <TextView
-                            style="@style/subtitle"
+                            style="@style/text_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter2"
+                            android:layout_below="@id/namaproduk2"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Skin Specialist" />
+                            android:text="Rp. 55000" />
 
                     </RelativeLayout>
 
@@ -161,12 +163,14 @@
 
             </com.google.android.flexbox.FlexboxLayout>
 
-<!--            Baris 2 -->
+            <!--            Baris 2-->
             <com.google.android.flexbox.FlexboxLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card3"
+                    android:onClick="goDetailDokter"
                     android:layout_marginVertical="10dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="20dp"
@@ -183,34 +187,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter3"
+                        <ImageView
+                            android:id="@+id/fotoproduk3"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/drboy2"
-                            app:civ_border_color="#B3CCCCCC"
-                            app:civ_border_width="0.5dp" />
+                            android:src="@drawable/p3" />
 
                         <TextView
-                            android:id="@+id/namadokter3"
+                            android:id="@+id/namaproduk3"
                             style="@style/title"
-                            android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter3"
+                            android:layout_below="@id/fotoproduk3"
                             android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Dr. Boy William" />
+                            android:text="Day Cream" />
 
                         <TextView
-                            style="@style/subtitle"
+                            style="@style/text_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter3"
+                            android:layout_below="@id/namaproduk3"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Dermatologi" />
+                            android:text="Rp. 69000" />
 
                     </RelativeLayout>
 
@@ -218,8 +220,8 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_marginVertical="10dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="20dp"
                     app:contentPaddingLeft="20dp"
@@ -233,34 +235,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter4"
+                        <ImageView
+                            android:id="@+id/fotoproduk4"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/drgirl3"
-                            app:civ_border_color="#B3CCCCCC"
-                            app:civ_border_width="0.5dp" />
+                            android:src="@drawable/p4" />
 
                         <TextView
-                            android:id="@+id/namadokter4"
+                            android:id="@+id/namaproduk4"
                             style="@style/title"
                             android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter4"
+                            android:layout_below="@id/fotoproduk4"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Dr. Girl Beatrix" />
+                            android:text="Acne Care" />
 
                         <TextView
-                            style="@style/subtitle"
+                            style="@style/text_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter4"
+                            android:layout_below="@id/namaproduk4"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Skin Specialist" />
+                            android:text="Rp. 143000" />
 
                     </RelativeLayout>
 
@@ -269,12 +269,15 @@
 
             </com.google.android.flexbox.FlexboxLayout>
 
-<!--            Baris 3 -->
+
+            <!--            Baris 3-->
             <com.google.android.flexbox.FlexboxLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card5"
+                    android:onClick="goDetailDokter"
                     android:layout_marginVertical="10dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="20dp"
@@ -291,35 +294,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter5"
+                        <ImageView
+                            android:id="@+id/fotoproduk5"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/drboy"
-                            app:civ_border_width="0.5dp"
-                            app:civ_border_color="#B3CCCCCC"/>
+                            android:src="@drawable/p2" />
 
                         <TextView
-                            android:id="@+id/namadokter5"
+                            android:id="@+id/namaproduk5"
                             style="@style/title"
-                            android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter5"
+                            android:layout_below="@id/fotoproduk5"
                             android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Dr. Boy William" />
+                            android:text="Mosturaizer" />
 
                         <TextView
-                            style="@style/subtitle"
+                            style="@style/text_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter5"
+                            android:layout_below="@id/namaproduk5"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Dermatologi" />
+                            android:text="Rp. 37000" />
 
                     </RelativeLayout>
 
@@ -327,8 +327,8 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_marginVertical="10dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="20dp"
                     app:contentPaddingLeft="20dp"
@@ -342,35 +342,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter6"
+                        <ImageView
+                            android:id="@+id/fotoproduk6"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/drgirl2"
-                            app:civ_border_width="0.5dp"
-                            app:civ_border_color="#B3CCCCCC"/>
+                            android:src="@drawable/p1" />
 
                         <TextView
-                            android:id="@+id/namadokter6"
+                            android:id="@+id/namaproduk6"
                             style="@style/title"
-                            android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter6"
+                            android:layout_below="@id/fotoproduk6"
                             android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Dr. Girl Beatrix" />
+                            android:text="Serum Whitening Cocok untuk segala kulit" />
 
                         <TextView
-                            style="@style/subtitle"
+                            style="@style/text_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter6"
+                            android:layout_below="@id/namaproduk6"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Skin Specialist" />
+                            android:text="Rp. 205000" />
 
                     </RelativeLayout>
 
@@ -379,12 +376,15 @@
 
             </com.google.android.flexbox.FlexboxLayout>
 
-<!--            Baris 4 -->
+
+            <!--            Baris 4 -->
             <com.google.android.flexbox.FlexboxLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card7"
+                    android:onClick="goDetailDokter"
                     android:layout_marginVertical="10dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="20dp"
@@ -401,35 +401,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter7"
+                        <ImageView
+                            android:id="@+id/fotoproduk7"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/drboy"
-                            app:civ_border_width="0.5dp"
-                            app:civ_border_color="#B3CCCCCC"/>
+                            android:src="@drawable/p4" />
 
                         <TextView
-                            android:id="@+id/namadokter7"
+                            android:id="@+id/namaproduk7"
                             style="@style/title"
-                            android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter7"
+                            android:layout_below="@id/fotoproduk7"
                             android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Dr. Boy William" />
+                            android:text="Waterclay" />
 
                         <TextView
-                            style="@style/subtitle"
+                            style="@style/text_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter7"
+                            android:layout_below="@id/namaproduk7"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Dermatologi" />
+                            android:text="Rp. 99000" />
 
                     </RelativeLayout>
 
@@ -437,8 +434,8 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_marginVertical="10dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="20dp"
                     app:contentPaddingLeft="20dp"
@@ -452,35 +449,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter8"
+                        <ImageView
+                            android:id="@+id/fotoproduk8"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/drgirl2"
-                            app:civ_border_width="0.5dp"
-                            app:civ_border_color="#B3CCCCCC"/>
+                            android:src="@drawable/p3" />
 
                         <TextView
-                            android:id="@+id/namadokter8"
+                            android:id="@+id/namaproduk8"
                             style="@style/title"
                             android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter8"
+                            android:layout_below="@id/fotoproduk8"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Dr. Girl Beatrix" />
+                            android:text="Sleeping Mask" />
 
                         <TextView
-                            style="@style/subtitle"
+                            style="@style/text_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter8"
+                            android:layout_below="@id/namaproduk8"
                             android:layout_centerHorizontal="true"
                             android:gravity="center"
-                            android:text="Skin Specialist" />
+                            android:text="Rp. 55000" />
 
                     </RelativeLayout>
 
@@ -489,115 +483,6 @@
 
             </com.google.android.flexbox.FlexboxLayout>
 
-<!--            Baris 5 -->
-            <com.google.android.flexbox.FlexboxLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_marginVertical="10dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="20dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="20dp"
-                    app:contentPaddingLeft="20dp"
-                    app:contentPaddingRight="20dp"
-                    app:contentPaddingTop="20dp"
-                    app:contentPaddingBottom="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter9"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@drawable/drboy"
-                            app:civ_border_width="0.5dp"
-                            app:civ_border_color="#B3CCCCCC"/>
-
-                        <TextView
-                            android:id="@+id/namadokter9"
-                            style="@style/title"
-                            android:layout_marginTop="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter9"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="Dr. Boy William" />
-
-                        <TextView
-                            style="@style/subtitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter9"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="Dermatologi" />
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_marginVertical="10dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="10dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="20dp"
-                    app:contentPaddingLeft="20dp"
-                    app:contentPaddingRight="20dp"
-                    app:contentPaddingTop="20dp"
-                    app:contentPaddingBottom="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/fotodokter10"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@drawable/drgirl2"
-                            app:civ_border_width="0.5dp"
-                            app:civ_border_color="#B3CCCCCC"/>
-
-                        <TextView
-                            android:id="@+id/namadokter10"
-                            style="@style/title"
-                            android:layout_marginTop="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="20dp"
-                            android:layout_below="@id/fotodokter10"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="Dr. Girl Beatrix" />
-
-                        <TextView
-                            style="@style/subtitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/namadokter10"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="Skin Specialist" />
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-
-            </com.google.android.flexbox.FlexboxLayout>
 
 
             <Space

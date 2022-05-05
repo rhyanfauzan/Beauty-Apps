@@ -150,7 +150,7 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_centerHorizontal="true"
-                                android:src="@drawable/face" />
+                                android:src="@drawable/p1" />
 
                             <TextView
                                 android:id="@+id/namaproduk"
@@ -200,7 +200,7 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_centerHorizontal="true"
-                                android:src="@drawable/face" />
+                                android:src="@drawable/p2" />
 
                             <TextView
                                 android:id="@+id/namaproduk2"
@@ -250,7 +250,7 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_centerHorizontal="true"
-                                android:src="@drawable/face" />
+                                android:src="@drawable/p3" />
 
                             <TextView
                                 android:id="@+id/namaproduk3"
@@ -300,7 +300,7 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_centerHorizontal="true"
-                                android:src="@drawable/face" />
+                                android:src="@drawable/p4" />
 
                             <TextView
                                 android:id="@+id/namaproduk4"
@@ -339,6 +339,7 @@
                         android:layout_height="150dp">
 
                         <RelativeLayout
+                            android:onClick="goProduk"
                             android:background="@drawable/card2"
                             android:padding="20dp"
                             android:layout_width="match_parent"

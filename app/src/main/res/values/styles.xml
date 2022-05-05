@@ -47,6 +47,11 @@
         <item name="android:textSize">10dp</item>
         <item name="fontFamily">@font/poppins_regular</item>
     </style>
+    <style name="text_price" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/teal_700</item>
+        <item name="android:textSize">14dp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
 
 <!--button -->
     <style name="btn_primary" parent="">

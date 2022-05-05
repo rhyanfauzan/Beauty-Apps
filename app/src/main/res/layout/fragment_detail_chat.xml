@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EFEFEF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DetailDokterFragment">
 
@@ -20,219 +21,242 @@
         style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/ic_goback"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/ic_goback"
         android:text="Dr. Boy William" />
 
     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/inputchat"
         android:layout_below="@id/title_page"
         android:layout_marginHorizontal="20dp"
-        android:layout_above="@id/inputchat"
         android:layout_marginTop="20dp"
-        android:scrollbars="none"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:scrollbars="none">
 
         <!--        col -->
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <!--            Baris -->
 
-<!--            chat kanan -->
-
-            <com.google.android.material.card.MaterialCardView
-                app:cardBackgroundColor="@color/blue_primary"
-                app:contentPadding="20dp"
-                android:layout_width="250dp"
-                android:layout_gravity="right"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/text_regular"
-                    android:textColor="@color/white"
-                    android:justificationMode="inter_word"
-                    android:text="About Lorem ipsum is simply dummy text.." />
-
-
-            </com.google.android.material.card.MaterialCardView>
-
             <TextView
-                android:layout_marginTop="8dp"
-                android:layout_gravity="right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="14:00"/>
-
-<!--            end chat kanan -->
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="30dp"/>
-
-
-            <!--            chat kiri -->
-            <com.google.android.material.card.MaterialCardView
-                app:cardBackgroundColor="@color/white"
-                android:layout_gravity="left"
-                app:contentPadding="20dp"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/text_regular"
-                    android:justificationMode="inter_word"
-                    android:text="About Lorem ipsum is simply dummy text of the printing and typesetting industry." />
-
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="14:10"/>
+                android:layout_gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_search"
+                android:backgroundTint="@color/grey"
+                android:text="Hari ini" />
 
             <!--            end chat kiri -->
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp"/>
+                android:layout_height="30dp" />
+
 
             <!--            chat kanan -->
 
-            <com.google.android.material.card.MaterialCardView
-                app:cardBackgroundColor="@color/blue_primary"
-                app:contentPadding="20dp"
-                android:layout_width="250dp"
-                android:layout_gravity="right"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/text_regular"
-                    android:textColor="@color/white"
-                    android:justificationMode="inter_word"
-                    android:text="About ?" />
-
-
-            </com.google.android.material.card.MaterialCardView>
-
             <TextView
-                android:layout_marginTop="8dp"
-                android:layout_gravity="right"
+                style="@style/text_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/rounded_chat2"
+                android:justificationMode="inter_word"
+                android:maxWidth="250dp"
+                android:padding="20dp"
+                android:text="Halo dok, selamat pagi."
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:text="14:00" />
+
+            <!--            end chat kiri -->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+
+            <!--            chat kiri -->
+
+            <TextView
+                style="@style/text_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_chat1"
+                android:justificationMode="inter_word"
+                android:maxWidth="250dp"
+                android:padding="20dp"
+                android:text="Halo, ada yang bisa saya bantu?" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="14:10" />
+
+            <!--            end chat kiri -->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+
+            <!--            chat kanan -->
+
+            <TextView
+                style="@style/text_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/rounded_chat2"
+                android:justificationMode="inter_word"
+                android:maxWidth="250dp"
+                android:padding="20dp"
+                android:text="About Lorem ipsum is simply dummy text of the printing and typesetting industry."
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
                 android:text="14:30"/>
 
-            <!--            end chat kanan -->
+            <!--            end chat kiri -->
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp"/>
+                android:layout_height="30dp" />
 
 
             <!--            chat kiri -->
-            <com.google.android.material.card.MaterialCardView
-                app:cardBackgroundColor="@color/white"
-                android:layout_gravity="left"
-                app:contentPadding="20dp"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/text_regular"
-                    android:justificationMode="inter_word"
-                    android:text="About Lorem ipsum is simply dummy text of the printing and typesetting industry." />
-
-
-            </com.google.android.material.card.MaterialCardView>
 
             <TextView
-                android:layout_marginTop="8dp"
+                style="@style/text_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="15:00"/>
+                android:background="@drawable/rounded_chat1"
+                android:justificationMode="inter_word"
+                android:maxWidth="250dp"
+                android:padding="20dp"
+                android:text="About Lorem ipsum is simply dummy text of the printing and typesetting industry." />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="14:35" />
 
             <!--            end chat kiri -->
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp"/>
+                android:layout_height="30dp" />
+
 
             <!--            chat kanan -->
 
-            <com.google.android.material.card.MaterialCardView
-                app:cardBackgroundColor="@color/blue_primary"
-                app:contentPadding="20dp"
-                android:layout_width="250dp"
-                android:layout_gravity="right"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/text_regular"
-                    android:textColor="@color/white"
-                    android:justificationMode="inter_word"
-                    android:text="About Lorem ipsum is simply dummy text of the printing and typesetting industry." />
-
-
-            </com.google.android.material.card.MaterialCardView>
-
             <TextView
-                android:layout_marginTop="8dp"
-                android:layout_gravity="right"
+                style="@style/text_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="22:00"/>
+                android:layout_gravity="right"
+                android:background="@drawable/rounded_chat2"
+                android:justificationMode="inter_word"
+                android:maxWidth="250dp"
+                android:padding="20dp"
+                android:text="Terima kasih dok."
+                android:textColor="@color/white" />
 
-            <!--            end chat kanan -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:text="15:00" />
+
+            <!--            end chat kiri -->
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp"/>
+                android:layout_height="30dp" />
+
+
+            <!--            chat kiri -->
+
+            <TextView
+                style="@style/text_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_chat1"
+                android:justificationMode="inter_word"
+                android:maxWidth="250dp"
+                android:padding="20dp"
+                android:text="Sama-sama kak." />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="15:10" />
+
+            <!--            end chat kiri -->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
         </LinearLayout>
         <!--        End Col -->
 
     </ScrollView>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/inputchat"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.App.TextInputLayout">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textLongMessage"
-            android:hint="Tulis pesan di sini"
-            style="@style/text_input"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rounded_input_text"
+        android:hint="Tulis pesan di sini"
+        android:inputType="text"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp" />
 
     <ImageView
         android:id="@+id/btn_send"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="15dp"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
         android:src="@drawable/ic_baseline_send_24"/>
 
 </RelativeLayout>

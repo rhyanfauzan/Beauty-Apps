@@ -11,8 +11,12 @@
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/ic_illustration1.xml" value="0.1455" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/ic_ilustrasi_dokter_cropped.xml" value="0.1455" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/ic_ilustrasi_dokter_new.xml" value="0.1455" />
+        <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/icon_skincare.xml" value="0.1455" />
+        <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/ilustrasi_opening.xml" value="0.1455" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/rounded_btn.xml" value="0.1455" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/rounded_chat1.xml" value="0.1455" />
+        <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/rounded_chat2.xml" value="0.1455" />
+        <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/rounded_input_teext.xml" value="0.1045" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/drawable/rounded_search.xml" value="0.1455" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/layout/activity_forgot_password.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/layout/activity_home.xml" value="0.22447916666666667" />
@@ -27,8 +31,11 @@
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/layout/fragment_detail_dokter.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/layout/fragment_favorite.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/layout/fragment_produk.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/layout/fragment_profile.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/menu/bottomnav_menu.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1455" />
+        <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyApps/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.1455" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyAppsNew/app/src/main/res/drawable/rounded_btn.xml" value="0.1455" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyAppsNew/app/src/main/res/drawable/rounded_btn_border.xml" value="0.1455" />
         <entry key="..\:/Users/Ryan Fauzan/AndroidStudioProjects/BeautyAppsNew/app/src/main/res/font/font.xml" value="0.25076923076923074" />

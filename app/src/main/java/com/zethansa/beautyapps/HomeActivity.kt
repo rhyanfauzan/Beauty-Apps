@@ -117,6 +117,23 @@ class HomeActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
     }
 
+    fun goProduk(view: View) {
+
+        val text = "Produk"
+        val duration = Toast.LENGTH_SHORT
+
+        val toast = Toast.makeText(applicationContext, text, duration)
+        toast.show()
+
+        // set true
+        bottomnavigation=findViewById(R.id.bottomnavigation);
+        bottomnavigation.getMenu().findItem(R.id.nav_favorite).setChecked(true);
+
+//      move fragment to detail
+        val fragment = FavoriteFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
+    }
+
 }
 
 
