@@ -1,18 +1,16 @@
 package com.zethansa.beautyapps
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.smarteist.autoimageslider.SliderView
 
 class HomeActivity : AppCompatActivity() {
 
     lateinit var bottomnavigation: BottomNavigationView
-    lateinit var goChatbtn: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,20 +46,35 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
+//        image slider
+
+//        val imageSlider = findViewById<SliderView>(R.id.imageSlider)
+//        val imageList: ArrayList<String> = ArrayList()
+//        imageList.add("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg")
+//        imageList.add("https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg")
+//        imageList.add("https://media.istockphoto.com/photos/child-hands-formig-heart-shape-picture-id951945718?k=6&m=951945718&s=612x612&w=0&h=ih-N7RytxrTfhDyvyTQCA5q5xKoJToKSYgdsJ_mHrv0=")
+//        setImageInSlider(imageList, imageSlider)
+//    }
+//
+//    private fun setImageInSlider(images: ArrayList<String>, imageSlider: SliderView) {
+//        val adapter = MySliderImageAdapter()
+//        adapter.renewItems(images)
+//        imageSlider.setSliderAdapter(adapter)
+//        imageSlider.isAutoCycle = true
+//        imageSlider.startAutoCycle()
     }
 
+//end image slider
+
+                                                                                                                                                                                            
     fun loadFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
     }
 
 
 //    Button
-    fun goLoginfromHome(view: View) {
-        val intent = Intent(this@HomeActivity, ForgotPassword::class.java)
-        startActivity(intent)
-    }
 
-    fun goChatfromHome(view: View) {
+    fun goChatfromHome(view: View?) {
 
         val text = "Silahkan pilih Dokter !"
         val duration = Toast.LENGTH_SHORT
@@ -78,7 +91,7 @@ class HomeActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
     }
 
-    fun goBackButton(view: View) {
+    fun goBackButton(view: View?) {
 
         val text = "Kembali"
         val duration = Toast.LENGTH_SHORT
@@ -91,7 +104,7 @@ class HomeActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
     }
 
-    fun goDetailDokter(view: View) {
+    fun goDetailDokter(view: View?) {
 
         val text = "Detail informasi Dokter"
         val duration = Toast.LENGTH_SHORT
@@ -104,7 +117,7 @@ class HomeActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
     }
 
-    fun goDetailChat(view: View) {
+    fun goDetailChat(view: View?) {
 
         val text = "Chat Dokter"
         val duration = Toast.LENGTH_SHORT
@@ -117,7 +130,7 @@ class HomeActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
     }
 
-    fun goProduk(view: View) {
+    fun goProduk(view: View?) {
 
         val text = "Produk"
         val duration = Toast.LENGTH_SHORT
@@ -132,6 +145,23 @@ class HomeActivity : AppCompatActivity() {
 //      move fragment to detail
         val fragment = FavoriteFragment()
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
+    }
+
+    fun goDetailProduk(view: View?) {
+
+//      move fragment to detail
+        val fragment = DetailProdukFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack(null).commit()
+    }
+
+    fun tambahKeranjang(view: View?) {
+
+        val text = "Memasukan ke dalam keranjang"
+        val duration = Toast.LENGTH_SHORT
+
+        val toast = Toast.makeText(applicationContext, text, duration)
+        toast.show()
+
     }
 
 }

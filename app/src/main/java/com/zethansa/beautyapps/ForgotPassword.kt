@@ -12,7 +12,7 @@ class ForgotPassword : AppCompatActivity() {
     }
 
     //        Button
-    fun goRegisterfromForgot(view: View?) {
+    fun goRegisterfromForgot() {
         val intent = Intent(this@ForgotPassword, Register::class.java)
         startActivity(intent)
     }
