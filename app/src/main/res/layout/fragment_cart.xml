@@ -1,16 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/teal_200"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CartFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/ic_goback"
+        android:layout_toRightOf="@id/title_page"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/ic_icon_cart" />
+
     <TextView
+        android:id="@+id/title_page"
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Keranjang" />
+
+    <ScrollView
+        android:layout_below="@id/title_page"
+        android:layout_above="@id/cogroup"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        style="@style/h1"
-        android:text="Cart" />
+        android:layout_height="match_parent">
+
+        <!--        col -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Baris -->
+            <RelativeLayout
+                android:background="@color/white"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/fotoproduk1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/p1" />
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_toRightOf="@id/fotoproduk1"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        style="@style/h2"
+                        android:text="Produk"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="99000 x 1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        style="@style/text_price"
+                        android:text="Rp. 99000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_add_circle_24"/>
+                    <TextView
+                        android:layout_marginTop="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_minimize_24"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/fotoproduk2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/p3" />
+
+                <LinearLayout
+                    android:id="@+id/linear3"
+                    android:layout_toRightOf="@id/fotoproduk2"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        style="@style/h2"
+                        android:text="Produk"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50000 x 3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        style="@style/text_price"
+                        android:text="Rp. 150000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear4"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_add_circle_24"/>
+                    <TextView
+                        android:layout_marginTop="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"/>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_minimize_24"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!--        End Col -->
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/cogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_checkout"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="20dp">
+
+        <TextView
+            android:id="@+id/subtotaltext"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub total" />
+
+        <TextView
+            android:id="@+id/subtotalprice"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:maxWidth="240dp"
+            android:text="249000" />
+
+        <TextView
+            android:id="@+id/ongkirtext"
+            style="@style/text_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtotalprice"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/ongkirprice"
+            android:text="Ongkos kirim" />
+
+        <TextView
+            android:id="@+id/ongkirprice"
+            style="@style/text_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtotalprice"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:maxWidth="240dp"
+            android:text="20000" />
+
+        <View
+            android:id="@+id/linegrey"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ongkirprice"
+            android:layout_marginVertical="10dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/totaltext"
+            style="@style/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linegrey"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/ongkirprice"
+            android:text="Total"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/totalprice"
+            style="@style/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linegrey"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:maxWidth="240dp"
+            android:text="269000"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_konsult"
+            style="@style/btn_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/totalprice"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_btn"
+            android:onClick="tambahKeranjang"
+            android:text="Checkout" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
