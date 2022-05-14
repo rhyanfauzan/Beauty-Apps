@@ -4,12 +4,15 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
+        configurations.all {
+            resolutionStrategy { force 'androidx.core:core-splashscreen:1.0.0-alpha02' }
+        }
         applicationId "com.zethansa.beautyapps"
         minSdk 21
-        targetSdk 32
+        targetSdk 22
         versionCode 1
         versionName "1.0"
 
@@ -33,7 +36,8 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+//    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-splashscreen:1.0.0-alpha02'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
