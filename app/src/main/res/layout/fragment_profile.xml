@@ -71,16 +71,17 @@
 
                 <ImageView
                     android:id="@+id/p1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_icon_profile"/>
+                    android:layout_centerVertical="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_portrait" />
 
                 <TextView
                     android:id="@+id/pn1"
                     android:layout_toRightOf="@id/p1"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="6dp"
+                    android:layout_marginLeft="10dp"
                     style="@style/text_regular"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Foto Profil"/>
@@ -89,8 +90,9 @@
                     android:id="@+id/ic1"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
+                    android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_rightback"/>
+                    android:src="@drawable/ic_angle_small_right"/>
 
             </RelativeLayout>
 
@@ -106,16 +108,17 @@
 
                 <ImageView
                     android:id="@+id/p2"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_icon_profile"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_user" />
 
                 <TextView
                     android:id="@+id/pn2"
                     android:layout_toRightOf="@id/p2"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="6dp"
+                    android:layout_marginLeft="10dp"
                     style="@style/text_regular"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nama"/>
@@ -125,7 +128,8 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_rightback"/>
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_angle_small_right"/>
 
             </RelativeLayout>
 
@@ -141,16 +145,17 @@
 
                 <ImageView
                     android:id="@+id/p3"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_icon_profile"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_envelope" />
 
                 <TextView
                     android:id="@+id/pn3"
                     android:layout_toRightOf="@id/p3"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="6dp"
+                    android:layout_marginLeft="10dp"
                     style="@style/text_regular"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email"/>
@@ -160,7 +165,8 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_rightback"/>
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_angle_small_right"/>
 
             </RelativeLayout>
 
@@ -176,26 +182,28 @@
 
                 <ImageView
                     android:id="@+id/p4"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_icon_profile"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_venus_mars" />
 
                 <TextView
                     android:id="@+id/pn4"
-                    android:layout_toRightOf="@id/p4"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="6dp"
                     style="@style/text_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jenis kelamin"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/p4"
+                    android:text="Jenis kelamin" />
 
                 <ImageView
                     android:id="@+id/ic4"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_rightback"/>
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_angle_small_right"/>
 
             </RelativeLayout>
 
@@ -211,16 +219,17 @@
 
                 <ImageView
                     android:id="@+id/p5"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_icon_profile"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_home_location_alt" />
 
                 <TextView
                     android:id="@+id/pn5"
                     android:layout_toRightOf="@id/p5"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="6dp"
+                    android:layout_marginLeft="10dp"
                     style="@style/text_regular"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Alamat"/>
@@ -230,7 +239,8 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_rightback"/>
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_angle_small_right"/>
 
             </RelativeLayout>
 
@@ -251,15 +261,14 @@
 
                 <ImageView
                     android:id="@+id/p6"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_icon_profile"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_sign_out_alt"/>
 
                 <TextView
                     android:id="@+id/pn6"
                     android:layout_toRightOf="@id/p6"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="6dp"
+                    android:layout_marginLeft="10dp"
                     style="@style/text_regular"
                     android:textColor="@color/grey"
                     android:layout_width="wrap_content"
